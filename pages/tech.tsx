@@ -23,10 +23,9 @@ export default function Tech() {
   <img
     src="/tech/ORB-RI-diagram.png"
     alt="ORB-RI Diagram"
-    className="w-full max-w-4xl h-auto object-contain"
+    className="w-full max-w-3xl h-auto object-contain mx-auto"
   />
 </div>
-
         <p className="text-sm text-gray-500 text-center">
           이 다이어그램은 공명 기반 판단 구조가 어떻게 지능을 조직화하는지를 시각적으로 표현합니다.
         </p>
