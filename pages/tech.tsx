@@ -19,14 +19,14 @@ export default function Tech() {
           <li><strong>KFN</strong> — Key Frequency Nexus 공명 네트워크</li>
         </ul>
 
-<div className="mb-12 rounded-lg overflow-hidden shadow flex justify-center">
+<div className="mb-8 rounded-lg overflow-hidden shadow flex justify-center">
   <img
     src="/tech/ORB-RI-diagram.png"
     alt="ORB-RI Diagram"
-    className="w-full max-w-3xl h-auto object-contain mx-auto"
+    className="w-full max-w-[700px] h-auto object-contain mx-auto"
+    style={{ maxHeight: "480px" }}
   />
-</div>
-        <p className="text-sm text-gray-500 text-center">
+</div>        <p className="text-sm text-gray-500 text-center">
           이 다이어그램은 공명 기반 판단 구조가 어떻게 지능을 조직화하는지를 시각적으로 표현합니다.
         </p>
       </section>
