@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navigation />
       <BackgroundStarlight />
       <Component {...pageProps} />
+      <Navigation />
       <Footer />
     </>
   );
