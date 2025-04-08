@@ -24,8 +24,8 @@ export default function Navigation() {
         <div className="flex items-center space-x-6 mt-3 md:mt-0">
           <ul className="flex flex-wrap gap-4 md:gap-6 text-sm md:text-lg font-medium">
             <li>
-<Link href="/resonance-declaration">
-  <span className="hover:text-indigo-400 transition pointer-events-auto">공명 선언</span>
+<Link href="/resonance-declaration" passHref legacyBehavior>
+  <a className="hover:text-indigo-400 transition">공명 선언</a>
 </Link>
             </li>
             <li>
