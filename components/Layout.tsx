@@ -1,3 +1,13 @@
+// Layout.tsx 수정본
+import Navigation from './Navigation';
+import Footer from './Footer';
+import BackgroundStarlight from './BackgroundStarlight';
+
+// LayoutProps 인터페이스 추가
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
 export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col relative">
