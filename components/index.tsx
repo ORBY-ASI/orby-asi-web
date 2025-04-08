@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 export default function HomePage() {
   return (
     <Layout>
-<div className="text-white space-y-6 relative z-30">
+<div className="text-white space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-indigo-300">
           공명 지능 이니셔티브
         </h1>
