@@ -46,11 +46,11 @@ export default function BackgroundStarlight() {
     return () => window.removeEventListener("resize", resizeCanvas);
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full opacity-30"
-      style={{ zIndex: -1 }}
-    />
-  );
+return (
+  <canvas
+    ref={canvasRef}
+    className="w-full h-full opacity-30"
+    style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }}
+  />
+);
 }
