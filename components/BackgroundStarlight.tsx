@@ -49,7 +49,8 @@ export default function BackgroundStarlight() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full z-[-1] opacity-30"
+      className="fixed top-0 left-0 w-full h-full opacity-30"
+      style={{ zIndex: -1 }}
     />
   );
 }
