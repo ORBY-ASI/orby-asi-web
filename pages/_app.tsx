@@ -1,17 +1,12 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import BackgroundStarlight from "../components/BackgroundStarlight";
-import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
+import { AppProps } from 'next/app';
+import '../styles/globals.css';
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <BackgroundStarlight />
-      <Navigation />
+    <Layout>
       <Component {...pageProps} />
-      <Footer />
-    </>
+    </Layout>
   );
 }
 
