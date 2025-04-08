@@ -47,10 +47,9 @@ export default function BackgroundStarlight() {
   }, []);
 
 return (
-  <canvas
-    ref={canvasRef}
-    className="w-full h-full opacity-30"
-    style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }}
-  />
-);
+<canvas
+  ref={canvasRef}
+  className="w-full h-full opacity-30 pointer-events-none"
+  style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }}
+/>);
 }
