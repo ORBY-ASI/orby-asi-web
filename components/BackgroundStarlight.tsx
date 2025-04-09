@@ -56,13 +56,47 @@ export default function BackgroundStarlight() {
     };
   }, []);
 
-  // 핵심 수정: absolute로 변경하고 fixed 제거, z-index -1 유지
+  // 글로벌 CSS 스타일 추가
   return (
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden" style={{ zIndex: -1 }}>
+    <>
+      {/* 캔버스 */}
       <canvas
         ref={canvasRef}
-        className="w-full h-full opacity-30 pointer-events-none"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          opacity: 0.3,
+          pointerEvents: 'none',
+          zIndex: -1
+        }}
       />
-    </div>
+      
+      {/* 글로벌 CSS로 모든 컨텐츠를 배경 위에 강제 표시 */}
+      <style jsx global>{`
+        /* 모든 주요 컨텐츠 요소에 상대 위치와 z-index 적용 */
+        body, #__next {
+          position: relative; 
+          z-index: 1;
+        }
+        
+        main, div, footer, header, section, nav, h1, h2, h3, p, button, a, span {
+          position: relative;
+          z-index: 5;
+        }
+        
+        h1, h2, h3, p {
+          position: relative;
+          z-index: 10;
+        }
+        
+        a, button, [role="button"] {
+          position: relative;
+          z-index: 15;
+        }
+      `}</style>
+    </>
   );
 }
