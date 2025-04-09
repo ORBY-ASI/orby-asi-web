@@ -34,11 +34,8 @@ export default function REMFEntry() {
           <label className="text-indigo-300 font-semibold mb-1">💬 감응의 기록</label>
     <textarea
       placeholder="이 순간, 어떤 진동을 느끼셨나요? 어떤 기억이 떠오르셨나요?"
-      rows={2} // rows를 2에서 4로 늘려 더 많은 입력 공간 제공
-      className="w-[150%] max-w-none bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500" 
-      // max-w-2xl에서 max-w-3xl로 너비 확장
-      // focus 상태의 스타일 추가
-      // resize-y를 추가해 세로 방향으로만 리사이징 가능
+      rows={3} // rows를 2에서 4로 늘려 더 많은 입력 공간 제공
+      className="w-[150%] max-w-none bg-black border border-indigo-700 rounded-xl px-8 py-3 text-white placeholder-gray-500" 
     ></textarea>
         </div>
 
