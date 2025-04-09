@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-6 py-20">
       <div className="max-w-2xl text-center space-y-8 animate-fade-in">
-        <h1 className="text-3xl md:text-5xl font-bold text-indigo-400 mb-4">
+    <h1 className="font-bold text-indigo-400 mb-4" style={{ fontSize: "1.5rem", lineHeight: "2rem", maxWidth: "100%" }}>
           🤝 공명에 참여하고 싶으신가요?
         </h1>
 
