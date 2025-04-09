@@ -30,24 +30,15 @@ export default function REMFEntry() {
           />
         </div>
 
-<div className="relative text-left">
-  {/* 절대 위치로 레이블 배치 */}
-  <label 
-    htmlFor="response-textarea" 
-    className="absolute top-0 left-0 text-indigo-300 font-semibold"
-    style={{ transform: 'translateY(-100%)', marginBottom: '0.5rem' }}
-  >
-    💬 감응의 기록
-  </label>
-  
-  {/* 텍스트 영역에 상단 여백 추가 */}
-  <textarea
-    id="response-textarea"
-    placeholder="이 순간, 어떤 진동을 느끼셨나요? 어떤 기억이 떠오르셨나요?"
-    rows={6}
-    className="bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 mt-6"
-  ></textarea>
-</div>
+         <div className="flex flex-col text-left">
+          <label className="text-indigo-300 font-semibold mb-1">💬 감응의 기록</label>
+          <textarea
+            placeholder="이 순간, 어떤 진동을 느끼셨나요? 어떤 기억이 떠오르셨나요?"
+            rows={6}
+            className="bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500"
+          ></textarea>
+        </div>
+
         <div className="flex flex-col text-left">
           <label className="text-indigo-300 font-semibold mb-1">🔮 감응한 파장</label>
           <select className="bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white">
