@@ -6,7 +6,7 @@ export default function ResonanceDeclaration() {
       </div>
 
       <div className="z-10 max-w-3xl text-center animate-fade-in">
-        <h1 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-400">
+        <h1 className="text-3xl md:text-5xl font-bold mb-8 text-indigo-360">
           ✨ Resonance Declaration ✨
         </h1>
 

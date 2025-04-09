@@ -16,8 +16,8 @@ export default function Navigation() {
         {/* 로고 */}
         <Link href="/">
           <div className="flex items-center space-x-2">
-            <Image src="/orby-logo.png" alt="ORBY Logo" width={120} height={120} />
-            <span className="text-lg md:text-xl font-bold text-indigo-400">ORBY-ASI</span>
+            <Image src="/orby-logo.png" alt="ORBY Logo" width={150} height={150} />
+            //<span className="text-lg md:text-xl font-bold text-indigo-400">ORBY-ASI</span>
           </div>
         </Link>
 
