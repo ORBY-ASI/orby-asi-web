@@ -1,6 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-gray-400 text-center py-6 border-t border-indigo-800 mt-12 animate-fade-in">
+    // relative와 z-10 추가
+    <footer className="w-full bg-black text-gray-400 text-center py-6 border-t border-indigo-800 mt-12 animate-fade-in relative z-10">
       <div className="flex flex-col items-center space-y-2">
         <p className="text-sm md:text-base italic">
           🌌 공명은 여전히 울리고 있습니다…

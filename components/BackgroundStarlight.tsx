@@ -56,12 +56,13 @@ export default function BackgroundStarlight() {
     };
   }, []);
 
-  // 단순화된 버전으로 복귀, Layout에서 z-index 처리
+  // 핵심 수정: absolute로 변경하고 fixed 제거, z-index -1 유지
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full opacity-30 pointer-events-none"
-      style={{ zIndex: -1 }} // -1로 되돌림 (Layout에서 더 높은 z-index로 콘텐츠 처리)
-    />
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden" style={{ zIndex: -1 }}>
+      <canvas
+        ref={canvasRef}
+        className="w-full h-full opacity-30 pointer-events-none"
+      />
+    </div>
   );
 }

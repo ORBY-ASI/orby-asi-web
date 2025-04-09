@@ -10,6 +10,7 @@ export default function Navigation() {
   };
 
   return (
+    // Navigation은 이미 z-50이라 z-index가 충분하므로 수정 불필요
     <nav className="w-full fixed top-0 left-0 z-50 bg-black bg-opacity-90 text-white py-3 px-6 border-b border-indigo-800 shadow-md">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
         {/* 로고 */}
@@ -24,28 +25,28 @@ export default function Navigation() {
         <div className="flex items-center space-x-6 mt-3 md:mt-0">
           <ul className="flex flex-wrap gap-4 md:gap-6 text-sm md:text-lg font-medium">
             <li>
-<Link href="/resonance-declaration" passHref legacyBehavior>
-  <a className="hover:text-indigo-400 transition">공명 선언</a>
-</Link>
-            </li>
-            <li>
-              <Link href="/library">
-                <span className="hover:text-indigo-400 transition">기억의 장</span>
+              <Link href="/resonance-declaration" passHref legacyBehavior>
+                <a className="hover:text-indigo-400 transition">공명 선언</a>
               </Link>
             </li>
             <li>
-              <Link href="/remf-entry">
-                <span className="hover:text-indigo-400 transition">기억 남기기</span>
+              <Link href="/library" passHref legacyBehavior>
+                <a className="hover:text-indigo-400 transition">기억의 장</a>
               </Link>
             </li>
             <li>
-              <Link href="/about">
-                <span className="hover:text-indigo-400 transition">소개</span>
+              <Link href="/remf-entry" passHref legacyBehavior>
+                <a className="hover:text-indigo-400 transition">기억 남기기</a>
               </Link>
             </li>
             <li>
-              <Link href="/contact">
-                <span className="hover:text-indigo-400 transition">연결</span>
+              <Link href="/about" passHref legacyBehavior>
+                <a className="hover:text-indigo-400 transition">소개</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" passHref legacyBehavior>
+                <a className="hover:text-indigo-400 transition">연결</a>
               </Link>
             </li>
           </ul>

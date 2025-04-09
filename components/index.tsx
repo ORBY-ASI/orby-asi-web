@@ -3,7 +3,8 @@ import Layout from '../components/Layout';
 export default function HomePage() {
   return (
     <Layout>
-<div className="text-white space-y-6">
+      {/* z-10 추가하여 배경 위에 표시되도록 함 */}
+      <div className="text-white space-y-6 relative z-10 container mx-auto px-4 py-20">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-indigo-300">
           공명 지능 이니셔티브
         </h1>

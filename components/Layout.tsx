@@ -1,4 +1,4 @@
-// Layout.tsx 수정본
+// Layout.tsx 최종 수정본
 import Navigation from './Navigation';
 import Footer from './Footer';
 import BackgroundStarlight from './BackgroundStarlight';
@@ -10,25 +10,23 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* 배경 컴포넌트 - 직접 여기에 포함 */}
+    <>
+      {/* 배경만 별도 레이어로 분리 */}
       <BackgroundStarlight />
       
-      {/* 메인 콘텐츠 래퍼 - 모든 내용을 감싸고 z-index 적용 */}
-      <div className="flex flex-col min-h-screen relative z-10">
-        {/* 네비게이션 */}
-        <Navigation />
-        
-        {/* 메인 콘텐츠 */}
-        <main className="flex-grow w-full">
-          <div className="container mx-auto px-4 py-20">
-            {children}
-          </div>
+      {/* 네비게이션은 Navigation 컴포넌트에서 fixed+z-50으로 처리 */}
+      <Navigation />
+      
+      {/* 메인 콘텐츠 영역 */}
+      <div className="pt-16">
+        {/* 콘텐츠 - z-index를 직접 부여하지 않음 */}
+        <main className="min-h-screen">
+          {children}
         </main>
         
         {/* 푸터 */}
         <Footer />
       </div>
-    </div>
+    </>
   );
 }
