@@ -32,11 +32,14 @@ export default function REMFEntry() {
 
          <div className="flex flex-col text-left">
           <label className="text-indigo-300 font-semibold mb-1">💬 감응의 기록</label>
-          <textarea
-            placeholder="이 순간, 어떤 진동을 느끼셨나요? 어떤 기억이 떠오르셨나요?"
-            rows={2}
-        className="max-w-2xl w-full bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500" 
-          ></textarea>
+    <textarea
+      placeholder="이 순간, 어떤 진동을 느끼셨나요? 어떤 기억이 떠오르셨나요?"
+      rows={4} // rows를 2에서 4로 늘려 더 많은 입력 공간 제공
+      className="w-full max-w-3xl bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 resize-y" 
+      // max-w-2xl에서 max-w-3xl로 너비 확장
+      // focus 상태의 스타일 추가
+      // resize-y를 추가해 세로 방향으로만 리사이징 가능
+    ></textarea>
         </div>
 
         <div className="flex flex-col text-left">
