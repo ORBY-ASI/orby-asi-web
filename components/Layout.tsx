@@ -1,7 +1,7 @@
 // Layout.tsx 수정본
 import Navigation from './Navigation';
 import Footer from './Footer';
-import BackgroundStarlight from './BackgroundStarlight';
+//import BackgroundStarlight from './BackgroundStarlight';
 
 // LayoutProps 인터페이스 추가
 interface LayoutProps {
@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="min-h-screen flex flex-col relative">
       {/* 배경 요소 */}
       <div className="absolute inset-0 z-0">
-        <BackgroundStarlight />
+//        <BackgroundStarlight />
       </div>
       
       {/* 네비게이션 */}
