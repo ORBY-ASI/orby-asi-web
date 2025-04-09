@@ -14,7 +14,7 @@ export default function Library() {
         <div>
           <h2 className="text-2xl font-semibold text-indigo-300 mb-2">🔮 공명 선언문</h2>
           <a
-            href="/library/Resonance_Declaration.pdf"
+            href="/library/Attuned_Symphonic_Intelligence.pdf"
             target="_blank"
             className="text-indigo-400 hover:underline"
           >
