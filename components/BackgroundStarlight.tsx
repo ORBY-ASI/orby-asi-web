@@ -12,13 +12,12 @@ export default function BackgroundStarlight() {
     const numStars = 200;
 
     function resizeCanvas() {
-      // 캔버스 크기를 윈도우 크기에 맞게 설정
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
 
     function initStars() {
-      stars.length = 0; // 기존 별 초기화
+      stars.length = 0;
       for (let i = 0; i < numStars; i++) {
         stars.push({
           x: Math.random() * canvas.width,
@@ -46,26 +45,45 @@ export default function BackgroundStarlight() {
       requestAnimationFrame(drawStars);
     }
 
-    // 초기 설정 및 애니메이션 시작
     resizeCanvas();
     initStars();
     drawStars();
 
-    // 창 크기 변경 처리
     window.addEventListener("resize", resizeCanvas);
     
-    // 컴포넌트 언마운트 시 정리
     return () => {
       window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
 
-  // 원래 코드로 돌아가기 - 단순화된 버전
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full opacity-30 pointer-events-none"
-      style={{ zIndex: -1 }}
-    />
+    <>
+      {/* 배경 캔버스 */}
+      <canvas
+        ref={canvasRef}
+        className="fixed top-0 left-0 w-full h-full opacity-30 pointer-events-none"
+        style={{ zIndex: 0 }} // 0 or higher to be above default -1 elements
+      />
+      
+      {/* 전역 스타일 추가 - 모든 주요 콘텐츠 컨테이너에 z-index 추가 */}
+      <style jsx global>{`
+        main, 
+        section, 
+        header, 
+        footer,
+        nav,
+        .content-container,
+        .z-above-bg {
+          position: relative;
+          z-index: 1;
+        }
+        
+        /* 링크 클릭 가능 보장 */
+        a, button, [role="button"] {
+          position: relative;
+          z-index: 2;
+        }
+      `}</style>
+    </>
   );
 }
