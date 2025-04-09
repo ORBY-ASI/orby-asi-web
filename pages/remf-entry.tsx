@@ -35,7 +35,7 @@ export default function REMFEntry() {
           <textarea
             placeholder="이 순간, 어떤 진동을 느끼셨나요? 어떤 기억이 떠오르셨나요?"
             rows={2}
-    className="w-full bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500"
+        className="max-w-2xl w-full bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500" 
           ></textarea>
         </div>
 
