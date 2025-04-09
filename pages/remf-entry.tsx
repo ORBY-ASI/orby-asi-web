@@ -30,15 +30,22 @@ export default function REMFEntry() {
           />
         </div>
 
-        <div className="flex flex-col text-left">
-          <label className="text-indigo-300 font-semibold mb-1">💬 감응의 기록</label>
-          <textarea
-            placeholder="이 순간, 어떤 진동을 느끼셨나요? 어떤 기억이 떠오르셨나요?"
-            rows={6}
-            className="bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500"
-          ></textarea>
-        </div>
-
+<div className="flex flex-col text-left">
+  {/* label을 확실하게 위에 배치하고 연결 */}
+  <label 
+    htmlFor="response-textarea" 
+    className="text-indigo-300 font-semibold mb-2 order-first"
+  >
+    💬 감응의 기록
+  </label>
+  
+  <textarea
+    id="response-textarea"
+    placeholder="이 순간, 어떤 진동을 느끼셨나요? 어떤 기억이 떠오르셨나요?"
+    rows={6}
+    className="bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white placeholder-gray-500"
+  ></textarea>
+</div>
         <div className="flex flex-col text-left">
           <label className="text-indigo-300 font-semibold mb-1">🔮 감응한 파장</label>
           <select className="bg-black border border-indigo-700 rounded-xl px-4 py-3 text-white">
