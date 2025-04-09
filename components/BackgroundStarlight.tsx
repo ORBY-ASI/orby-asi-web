@@ -54,7 +54,7 @@ export default function BackgroundStarlight() {
       className="fixed top-0 left-0 w-full opacity-30 pointer-events-none"
       style={{ 
         zIndex: -1, 
-        height: "500px" // CSS에서도 높이 제한
+        height: "100px" // CSS에서도 높이 제한
       }}
     />
   );
