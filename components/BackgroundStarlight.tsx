@@ -12,6 +12,7 @@ export default function BackgroundStarlight() {
     const numStars = 200;
 
     function resizeCanvas() {
+      // 캔버스 크기를 윈도우 크기에 맞게 설정
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
@@ -51,52 +52,20 @@ export default function BackgroundStarlight() {
     drawStars();
 
     // 창 크기 변경 처리
-    function handleResize() {
-      // 원래 위치 기억
-      const oldWidth = canvas.width;
-      const oldHeight = canvas.height;
-      
-      // 캔버스 크기 업데이트
-      resizeCanvas();
-      
-      // 별 위치 비율 조정
-      stars.forEach(star => {
-        star.x = (star.x / oldWidth) * canvas.width;
-        star.y = (star.y / oldHeight) * canvas.height;
-      });
-    }
-
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", resizeCanvas);
     
     // 컴포넌트 언마운트 시 정리
     return () => {
-      window.removeEventListener("resize", handleResize);
-      // 애니메이션 프레임 취소 로직이 필요하다면 여기에 추가
+      window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
 
+  // 원래 코드로 돌아가기 - 단순화된 버전
   return (
-    <div 
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: -1,
-        overflow: 'hidden',
-        pointerEvents: 'none' // 이것이 링크 클릭을 방해하지 않도록 함
-      }}
-    >
-      <canvas
-        ref={canvasRef}
-        style={{
-          width: '100%',
-          height: '100%',
-          opacity: 0.3,
-          display: 'block'
-        }}
-      />
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="fixed top-0 left-0 w-full h-full opacity-30 pointer-events-none"
+      style={{ zIndex: -1 }}
+    />
   );
 }
