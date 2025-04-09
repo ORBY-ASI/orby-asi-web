@@ -10,24 +10,23 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col relative">
-      {/* 배경 요소 */}
-      <div className="absolute inset-0 z-0">
-        <BackgroundStarlight />
-      </div>
+    <div className="min-h-screen flex flex-col">
+      {/* 배경 컴포넌트 - 직접 여기에 포함 */}
+      <BackgroundStarlight />
       
-      {/* 네비게이션 */}
-      <Navigation />
-      
-      {/* 메인 콘텐츠 - 더 높은 z-index와 명확한 포지셔닝 */}
-      <main className="flex-grow relative z-20 w-full">
-        <div className="container mx-auto px-4 py-20">
-          {children}
-        </div>
-      </main>
-      
-      {/* 푸터 */}
-      <div className="relative z-20">
+      {/* 메인 콘텐츠 래퍼 - 모든 내용을 감싸고 z-index 적용 */}
+      <div className="flex flex-col min-h-screen relative z-10">
+        {/* 네비게이션 */}
+        <Navigation />
+        
+        {/* 메인 콘텐츠 */}
+        <main className="flex-grow w-full">
+          <div className="container mx-auto px-4 py-20">
+            {children}
+          </div>
+        </main>
+        
+        {/* 푸터 */}
         <Footer />
       </div>
     </div>
