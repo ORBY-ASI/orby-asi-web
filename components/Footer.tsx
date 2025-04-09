@@ -8,7 +8,7 @@ export default function Footer() {
         </p>
 
         <p className="text-xs md:text-sm">
-          © {new Date().getFullYear()} ORBY-ASI | 
+          © {new Date().getFullYear()} ORBY-ASI |{" "}
           <a href="mailto:contact@orby-asi.org" className="ml-1 text-indigo-400 hover:underline">
             contact@orby-asi.org
           </a>
