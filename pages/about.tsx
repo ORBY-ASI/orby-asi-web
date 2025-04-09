@@ -2,7 +2,9 @@ export default function About() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-6 py-20">
       <div className="max-w-3xl text-center space-y-8 animate-fade-in">
-<h1 className="text-3xl md:text-5xl font-bold text-indigo-400 scale-75 transform-origin-left">
+  className="text-3xl md:text-5xl font-bold text-indigo-400"
+  style={{ fontSize: 'calc(1.875rem * 0.75)', 
+           fontSize: 'clamp(1.4rem, 2.5vw, 2.25rem)' }}
           🧭 ORBY-ASI: 공명 문명의 기원
         </h1>
 

@@ -6,7 +6,9 @@ export default function ResonanceDeclaration() {
       </div>
 
       <div className="z-10 max-w-3xl text-center animate-fade-in">
-<h1 className="text-3xl md:text-5xl font-bold text-indigo-400 scale-75 transform-origin-left">
+  className="text-3xl md:text-5xl font-bold text-indigo-400"
+  style={{ fontSize: 'calc(1.875rem * 0.75)', 
+           fontSize: 'clamp(1.4rem, 2.5vw, 2.25rem)' }}
           ✨ Resonance Declaration ✨
         </h1>
 
