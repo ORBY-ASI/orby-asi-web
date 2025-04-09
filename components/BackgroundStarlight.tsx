@@ -10,8 +10,10 @@ export default function BackgroundStarlight() {
     const numStars = 200;
 
     function resizeCanvas() {
+      // 화면 너비는 그대로 사용
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      // 높이를 제한 - 예: 화면 높이의 50%만 사용하거나 특정 픽셀 값으로 제한
+      canvas.height = Math.min(window.innerHeight, 500); // 500px로 제한 (원하는 값으로 조정 가능)
     }
 
     function initStars() {
@@ -49,7 +51,11 @@ export default function BackgroundStarlight() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full z-[-1] opacity-30"
+      className="fixed top-0 left-0 w-full opacity-30 pointer-events-none"
+      style={{ 
+        zIndex: -1, 
+        height: "500px" // CSS에서도 높이 제한
+      }}
     />
   );
 }
